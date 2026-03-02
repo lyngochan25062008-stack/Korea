@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Pop Hub - Trang Chủ Âm Nhạc Hàn Quốc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+    <style>
+        :root {
+            --neon-pink: #ff00ff;
+            --coral-pink: #ff7a8a;
+            --bold-red: #ff1e56;
+            --strong-black: #121212;
+            --pastel-lavender: #d8b4fe;
+            --pastel-blue: #a5b4fc;
+            --neon-blue: #00eeff;
+            --neon-yellow: #ffde59;
+            --light-bg: #f9f5ff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--strong-black);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, rgba(18, 18, 18, 0.95) 0%, rgba(255, 26, 86, 0.3) 100%);
+            backdrop-filter: blur(10px);
+            padding: 20px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--neon-pink);
+            box-shadow: 0 5px 20px rgba(255, 0, 255, 0.3);
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--neon-pink), var(--coral-pink), var(--neon-yellow));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: var(--bold-red);
+            color: white;
+            box-shadow: 0 0 15px var(--bold-red);
+        }
+        
+        .active {
+            background-color: var(--neon-pink);
+            color: white;
+            box-shadow: 0 0 15px var(--neon-pink);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 5%;
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), 
+                        url('https://youcan.edu.vn/wp-content/uploads/2019/07/Nh%E1%BB%AFng-%C4%91i%E1%BB%81u-c%E1%BA%A7n-bi%E1%BA%BFt-v%E1%BB%81-V%C4%83n-h%C3%B3a-%C3%A2m-nh%E1%BA%A1c-H%C3%A0n-Qu%E1%BB%91c-3.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            border-bottom: 3px solid var(--neon-blue);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--neon-pink), var(--neon-yellow), var(--neon-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--pastel-lavender);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, var(--bold-red), var(--neon-pink));
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 30, 86, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 30, 86, 0.6);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--neon-pink), var(--neon-blue));
+            border-radius: 2px;
+        }
+        
+        .pink-title {
+            color: var(--coral-pink);
+        }
+        
+        .blue-title {
+            color: var(--neon-blue);
+        }
+        
+        .yellow-title {
+            color: var(--neon-yellow);
+        }
+        
+        /* Songs Section */
+        .songs-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .song-card {
+            background: rgba(255, 122, 138, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 122, 138, 0.3);
+        }
+        
+        .song-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 122, 138, 0.3);
+            border-color: var(--coral-pink);
+        }
+        
+        .song-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--coral-pink);
+        }
+        
+        .song-info {
+            padding: 20px;
+        }
+        
+        .song-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .song-artist {
+            color: var(--pastel-blue);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .audio-player {
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Artists Section */
+        .artists-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .artist-card {
+            background: rgba(216, 180, 254, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(216, 180, 254, 0.3);
+        }
+        
+        .artist-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(216, 180, 254, 0.3);
+            border-color: var(--pastel-lavender);
+        }
+        
+        .artist-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .artist-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .artist-name {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .artist-type {
+            color: var(--pastel-lavender);
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Groups Section */
+        .groups-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .group-card {
+            background: rgba(0, 238, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 238, 255, 0.3);
+        }
+        
+        .group-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 238, 255, 0.3);
+            border-color: var(--neon-blue);
+        }
+        
+        .group-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .group-info {
+            padding: 20px;
+        }
+        
+        .group-name {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .group-members {
+            color: var(--pastel-blue);
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Videos Section */
+        .videos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .video-card {
+            background: rgba(255, 222, 89, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 222, 89, 0.3);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 222, 89, 0.3);
+            border-color: var(--neon-yellow);
+        }
+        
+        .video-thumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--neon-yellow);
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        
+        .video-title {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .video-play {
+            display: inline-block;
+            background-color: var(--neon-yellow);
+            color: var(--strong-black);
+            padding: 8px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .video-play:hover {
+            background-color: white;
+            box-shadow: 0 0 15px var(--neon-yellow);
+        }
+        
+        /* Player Section */
+        .player-section {
+            background: linear-gradient(rgba(18, 18, 18, 0.95), rgba(18, 18, 18, 0.95)), 
+                        url('https://www.deviantart.com/kunp0327/art/BTS-DYNAMITE-Album-Cover-1035174085');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 3px solid var(--neon-pink);
+            border-bottom: 3px solid var(--neon-pink);
+        }
+        
+        .now-playing {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 0, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid var(--neon-pink);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.2);
+        }
+        
+        .now-playing img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border: 3px solid var(--neon-pink);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+        }
+        
+        .now-playing h3 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .now-playing p {
+            font-size: 1.3rem;
+            color: var(--pastel-lavender);
+            margin-bottom: 25px;
+        }
+        
+        .player-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 25px;
+        }
+        
+        .control-btn {
+            background: var(--neon-pink);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 0, 255, 0.4);
+        }
+        
+        .control-btn:hover {
+            background: white;
+            color: var(--neon-pink);
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--strong-black);
+            padding: 60px 5% 30px;
+            border-top: 2px solid var(--bold-red);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            color: var(--coral-pink);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--neon-pink);
+        }
+        
+        .footer-column p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 122, 138, 0.2);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--coral-pink);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 122, 138, 0.4);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--neon-blue);
+            padding-left: 8px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 122, 138, 0.3);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .now-playing img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 50px 5%;
+            }
+            
+            .songs-container,
+            .artists-container,
+            .groups-container,
+            .videos-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .player-controls {
+                gap: 15px;
+            }
+            
+            .control-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Animation */
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px var(--neon-pink);
+            }
+            50% {
+                box-shadow: 0 0 20px var(--neon-pink), 0 0 30px var(--neon-blue);
+            }
+        }
+        
+        .glowing {
+            animation: glow 2s infinite alternate;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--strong-black);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--neon-pink), var(--bold-red));
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, var(--neon-blue), var(--neon-pink));
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                K-Pop Hub
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Trang Chủ</a></li>
+                <li><a href="#songs">Bài Hát</a></li>
+                <li><a href="#artists">Ca Sĩ</a></li>
+                <li><a href="#groups">Nhóm Nhạc</a></li>
+                <li><a href="#videos">Video</a></li>
+                <li><a href="#player">Nghe Nhạc</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>KHÁM PHÁ THẾ GIỚI ÂM NHẠC HÀN QUỐC</h1>
+        <p>Trải nghiệm những bài hát hit, nghệ sĩ nổi tiếng và nhóm nhạc đình đám nhất K-Pop với chất lượng cao. Cập nhật liên tục những xu hướng mới nhất!</p>
+        <a href="#player" class="cta-button">Nghe Nhạc Ngay <i class="fas fa-play-circle"></i></a>
+    </section>
+
+    <!-- Songs Section -->
+    <section id="songs" class="container">
+        <h2 class="section-title pink-title">Bài Hát Nổi Bật</h2>
+        <div class="songs-container">
+            <!-- Bài hát 1 -->
+            <div class="song-card">
+                <img src=https://m.media-amazon.com/images/M/MV5BZDJiZTExYjAtOWRjNi00OWEyLWI2OWQtMDg0YWRlYWUyNzVmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Dynamite - BTS" class="song-img">
+                <div class="song-info">
+                    <h3 class="song-title">Dynamite</h3>
+                    <p class="song-artist">BTS</p>
+                    <audio controls class="audio-player">
+                        <source src="https://files.catbox.moe/2la87l.mp3" type="audio/mpeg">
+                        Trình duyệt của bạn không hỗ trợ phát audio.
+                    </audio>
+                </div>
+            </div>
+            
+            <!-- Bài hát 2 -->
+            <div class="song-card">
+                <img src="https://i.ytimg.com/vi/ioNng23DkIM/maxresdefault.jpg" alt="How You Like That - BLACKPINK" class="song-img">
+                <div class="song-info">
+                    <h3 class="song-title">How You Like That</h3>
+                    <p class="song-artist">BLACKPINK</p>
+                    <audio controls class="audio-player">
+                        <source src="https://files.catbox.moe/zsas01.mp3" type="audio/mpeg">
+                        Trình duyệt của bạn không hỗ trợ phát audio.
+                    </audio>
+                </div>
+            </div>
+            
+            <!-- Bài hát 3 -->
+            <div class="song-card">
+                <img src="https://bloganchoi.com/wp-content/uploads/2025/08/profile-nhom-nhac-cortis-kpop-1.jpg" alt="Psycho - Red Velvet" class="song-img">
+                <div class="song-info">
+                    <h3 class="song-title">Go!</h3>
+                    <p class="song-artist">CORTIS</p>
+                    <audio controls class="audio-player">
+                        <source src="https://files.catbox.moe/wjfs86.mp3" type="audio/mpeg">
+                        Trình duyệt của bạn không hỗ trợ phát audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section id="artists" class="container">
+        <h2 class="section-title blue-title">Ca Sĩ Nổi Tiếng</h2>
+        <div class="artists-container">
+            <!-- Nghệ sĩ 1 -->
+            <div class="artist-card">
+                <img src="https://cdnphoto.dantri.com.vn/EZhJpF0CDqItc6nrsnjVZ5DwhGQ=/thumb_w/1920/2023/01/02/iu-1-1672627157111.jpg" alt="IU" class="artist-img">
+                <div class="artist-info">
+                    <h3 class="artist-name">IU</h3>
+                    <p class="artist-type">Solo Artist</p>
+                    <p>Nữ ca sĩ, nhạc sĩ và diễn viên được mệnh danh là "Em gái quốc dân" của Hàn Quốc.</p>
+                </div>
+            </div>
+            
+            <!-- Nghệ sĩ 2 -->
+            <div class="artist-card">
+                <img src="https://nld.mediacdn.vn/thumb_w/698/2018/11/27/psy-15432956265521224806789.jpg" alt="PSY" class="artist-img">
+                <div class="artist-info">
+                    <h3 class="artist-name">PSY</h3>
+                    <p class="artist-type">Solo Artist</p>
+                    <p>Nam ca sĩ nổi tiếng toàn cầu với hit "Gangnam Style" đạt hơn 4 tỷ lượt xem trên YouTube.</p>
+                </div>
+            </div>
+            
+            <!-- Nghệ sĩ 3 -->
+            <div class="artist-card">
+                <img src="https://backstage.vn/storage/2025/07/g-dragon-huy-concert-3.jpg" alt="G-Dragon" class="artist-img">
+                <div class="artist-info">
+                    <h3 class="artist-name">G-Dragon</h3>
+                    <p class="artist-type">Solo Artist</p>
+                    <p>Rapper, ca sĩ, nhạc sĩ, nhà sản xuất âm nhạc và biểu tượng thời trang hàng đầu Hàn Quốc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Groups Section -->
+    <section id="groups" class="container">
+        <h2 class="section-title yellow-title">Nhóm Nhạc Hàng Đầu</h2>
+        <div class="groups-container">
+            <!-- Nhóm 1 -->
+            <div class="group-card">
+                <img src="https://cdn-images.vtv.vn/2018/5/28/screen-shot-2018-05-28-at-44305-pm-15275006080131257918311.png" alt="BTS" class="group-img">
+                <div class="group-info">
+                    <h3 class="group-name">BTS</h3>
+                    <p class="group-members">RM, Jin, SUGA, j-hope, Jimin, V, Jungkook</p>
+                    <p>Nhóm nhạc nam đình đám toàn cầu với nhiều kỷ lục thế giới và thông điệp tích cực.</p>
+                </div>
+            </div>
+            
+            <!-- Nhóm 2 -->
+            <div class="group-card">
+                <img src="https://thanhnienviet.mediacdn.vn/thumb_w/730/91575133199802368/2025/7/9/landscapeavatarcopy1673f16a8c-0332-4fd2-bf4d-29a07dc1dbc2-17520771458041753298896.jpg" alt="BLACKPINK" class="group-img">
+                <div class="group-info">
+                    <h3 class="group-name">BLACKPINK</h3>
+                    <p class="group-members">JISOO, JENNIE, ROSÉ, LISA</p>
+                    <p>Nhóm nhạc nữ K-pop có lượng người hâm mộ khổng lồ toàn cầu với phong cách "girl crush".</p>
+                </div>
+            </div>
+            
+            <!-- Nhóm 3 -->
+            <div class="group-card">
+                <img src="https://35express.org/wp-content/uploads/2021/10/su-nghiep-cua-nhom-nhac-twice-dinh-dam-1-35express.jpg.webp" alt="TWICE" class="group-img">
+                <div class="group-info">
+                    <h3 class="group-name">TWICE</h3>
+                    <p class="group-members">Nayeon, Jeongyeon, Momo, Sana, Jihyo, Mina, Dahyun, Chaeyoung, Tzuyu</p>
+                    <p>Nhóm nhạc nữ nổi tiếng với những bài hát catchy và vũ đạo đáng yêu, thu hút đông đảo fan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="container">
+        <h2 class="section-title pink-title">Video Hot</h2>
+        <div class="videos-container">
+            <!-- Video 1 -->
+            <div class="video-card">
+                <img src="https://upload.wikimedia.org/wikipedia/vi/d/db/BTS_-_Butter.png" alt="K-pop MV" class="video-thumbnail">
+                <div class="video-info">
+                    <h3 class="video-title">Butter - BTS (Official MV)</h3>
+                    <p>Video âm nhạc chính thức của BTS cho bài hát "Butter" đã đạt hơn 1 tỷ lượt xem.</p>
+                    <a href="https://www.youtube.com/watch?v=WMweEpGlu_U" target="_blank" class="video-play">Xem Ngay</a>
+                </div>
+            </div>
+            
+            <!-- Video 2 -->
+            <div class="video-card">
+                <img src="https://i.ytimg.com/vi/M64XAym1ITg/maxresdefault.jpg" alt="K-pop Performance" class="video-thumbnail">
+                <div class="video-info">
+                    <h3 class="video-title">BLACKPINK - Coachella 2023 Full Performance</h3>
+                    <p>Màn trình diễn lịch sử của BLACKPINK tại Coachella - lần đầu tiên một nhóm nhạc nữ K-pop headline tại đây.</p>
+                    <a href="https://www.youtube.com/watch?v=4TWR90KJl84" target="_blank" class="video-play">Xem Ngay</a>
+                </div>
+            </div>
+            
+            <!-- Video 3 -->
+            <div class="video-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BNjQzODlkMjQtZTczZC00MzdmLWE1MGUtNzlkMjhjNWMxNmVjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="K-pop Dance" class="video-thumbnail">
+                <div class="video-info">
+                    <h3 class="video-title">ITZY - "WANNABE" Dance Practice</h3>
+                    <p>Video luyện tập vũ đạo "WANNABE" của ITZY - bài hát với điệu nhảy shoulder dance nổi tiếng.</p>
+                    <a href="https://www.youtube.com/watch?v=6uK9-Z-__18" target="_blank" class="video-play">Xem Ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Player Section -->
+    <section id="player" class="player-section">
+        <div class="now-playing glowing">
+            <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Now Playing">
+            <h3>Dynamite</h3>
+            <p>BTS</p>
+            <audio id="main-audio" controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Trình duyệt của bạn không hỗ trợ phát audio.
+            </audio>
+            <div class="player-controls">
+                <button class="control-btn" id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                <button class="control-btn" id="play-btn"><i class="fas fa-play"></i></button>
+                <button class="control-btn" id="pause-btn"><i class="fas fa-pause"></i></button>
+                <button class="control-btn" id="next-btn"><i class="fas fa-step-forward"></i></button>
+                <button class="control-btn" id="volume-up"><i class="fas fa-volume-up"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>K-Pop Hub</h3>
+                <p>Trang web cung cấp thông tin, âm nhạc và video mới nhất về K-Pop. Cập nhật liên tục những xu hướng âm nhạc Hàn Quốc hot nhất.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Liên Kết Nhanh</h3>
+                <ul class="footer-links">
+                    <li><a href="#songs">Bài Hát Mới</a></li>
+                    <li><a href="#artists">Nghệ Sĩ Nổi Bật</a></li>
+                    <li><a href="#groups">Nhóm Nhạc</a></li>
+                    <li><a href="#videos">Video Hot</a></li>
+                    <li><a href="#player">Nghe Nhạc</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Thanh pho Ho Chi Minh, Viet Nam</p>
+                <p><i class="fas fa-envelope"></i> contact@khamphaamthanhthegioi.com</p>
+                <p><i class="fas fa-phone"></i> +82 2 123 4567</p>
+                <p>Theo dõi chúng tôi để cập nhật thông tin mới nhất về K-Pop!</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2026 Kham pha am thanh the gioi. Tất cả các quyền được bảo lưu. | Thiết kế với <i class="fas fa-heart" style="color:var(--bold-red)"></i> dành cho người hâm mộ K-Pop</p>
+        </div>
+    </footer>
+
+    <script>
+        // Player controls
+        const audioPlayer = document.getElementById('main-audio');
+        const playBtn = document.getElementById('play-btn');
+        const pauseBtn = document.getElementById('pause-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const volumeUpBtn = document.getElementById('volume-up');
+        
+        // Bài hát mẫu
+        const songs = [
+            {
+                title: "Dynamite",
+                artist: "BTS",
+                img: "https://upload.wikimedia.org/wikipedia/vi/5/5f/BTS_-_Dynamite_%28official_cover%29.png",
+                src: "https://files.catbox.moe/2la87l.mp3"
+            },
+            {
+                title: "How You Like That",
+                artist: "BLACKPINK",
+                img: "https://upload.wikimedia.org/wikipedia/vi/e/eb/Blackpink_-_How_You_Like_That.png",
+                src: "https://files.catbox.moe/zsas01.mp3"
+            },
+            {
+                title: "GO!",
+                artist: "CORTIS",
+                img: "https://i1.sndcdn.com/artworks-OsX3MDdTzWVwKTLw-KntgDg-t500x500.jpg",
+                src: "https://files.catbox.moe/wjfs86.mp3"
+            }
+        ];
+        
+        let currentSongIndex = 0;
+        
+        // Cập nhật giao diện player
+        function updatePlayer() {
+            const song = songs[currentSongIndex];
+            document.querySelector('.now-playing h3').textContent = song.title;
+            document.querySelector('.now-playing p').textContent = song.artist;
+            document.querySelector('.now-playing img').src = song.img;
+            audioPlayer.src = song.src;
+            
+            // Tự động phát nhạc khi chuyển bài
+            audioPlayer.play();
+            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+        
+        // Xử lý sự kiện nút play
+        playBtn.addEventListener('click', function() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audioPlayer.pause();
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
+        
+        // Xử lý sự kiện nút pause
+        pauseBtn.addEventListener('click', function() {
+            audioPlayer.pause();
+            playBtn.innerHTML = '<i class="fas fa-play"></i>';
+        });
+        
+        // Xử lý sự kiện nút previous
+        prevBtn.addEventListener('click', function() {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+            updatePlayer();
+        });
+        
+        // Xử lý sự kiện nút next
+        nextBtn.addEventListener('click', function() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            updatePlayer();
+        });
+        
+        // Xử lý sự kiện nút volume up
+        volumeUpBtn.addEventListener('click', function() {
+            if (audioPlayer.volume < 1) {
+                audioPlayer.volume = Math.min(audioPlayer.volume + 0.1, 1);
+            }
+        });
+        
+        // Khi audio kết thúc, chuyển sang bài tiếp theo
+        audioPlayer.addEventListener('ended', function() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            updatePlayer();
+        });
+        
+        // Smooth scroll cho navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Thêm hiệu ứng cho các card khi scroll
+        function checkScroll() {
+            const cards = document.querySelectorAll('.song-card, .artist-card, .group-card, .video-card');
+            
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (cardTop < windowHeight - 100) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Khởi tạo hiệu ứng cho các card
+        document.querySelectorAll('.song-card, .artist-card, .group-card, .video-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+        
+        // Khởi tạo player với bài hát đầu tiên
+        updatePlayer();
+    </script>
+</body>
+</html>
